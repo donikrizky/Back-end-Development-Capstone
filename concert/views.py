@@ -22,14 +22,14 @@ def index(request):
 
 
 def songs(request):
-    # songs = {"songs":[]}
-    # return render(request, "songs.html", {"songs": [insert list here]})
+    songs = req.get("SONGS_URL/song").json()
+    return render(request, "songs.html", {"songs": songs["songs"]})
     pass
 
 
 def photos(request):
-    # photos = []
-    # return render(request, "photos.html", {"photos": photos})
+    photos = req.get("PHOTO_URL/picture").json()
+    return render(request, "photos.html", {"photos": photos})
     pass
 
 def login_view(request):
